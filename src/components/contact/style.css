@@ -1,3 +1,39 @@
+.loading-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.87);
+    height: 100vh;
+    width: 100%;
+}
+
+.loading-container h1{
+    font-size: 21pt;
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+.fa-spinner{
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    font-size: 60pt;
+    animation: spin 2s linear infinite;
+}
+
+
+
+.fa-check-circle{
+
+    z-index: 2;
+    color: green;
+    font-size: 60pt;
+}
+
+
 .background-form {
     position: relative;
     width: 100%;
@@ -118,26 +154,7 @@
     color: white;
 }
 
-.fa-spinner{
-    position: absolute;
-    top: 43%;
-    left: 45%;
-    z-index: 2;
-    color: rgba(0, 0, 0, 0.63);
-    font-size: 50pt;
-    animation: spin 2s linear infinite;
-}
 
-
-
-.fa-check-circle{
-
-    z-index: 2;
-    color: green;
-    font-size: 50pt;
-    margin: auto;
-
-}
 
 
 

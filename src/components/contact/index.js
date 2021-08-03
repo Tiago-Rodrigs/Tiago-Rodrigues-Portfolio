@@ -12,27 +12,25 @@ class Contact extends Component {
             greeting: "How can I help you today?"
         }
         window.scrollTo(0, 0)
-
+        console.log(this.state.msg)
     }
 
     send = async () => {
         let name = document.getElementById('name').value;
         let email = document.getElementById('email').value;
         let msg = document.getElementById('message').value;
-        let form = document.getElementById('form');
-        let greeting = document.getElementById('greeting');
+        let form = document.getElementById('loading-container');
 
-        greeting.innerHTML = "Wait just a second!"
-
-        
+        document.body.style.overflow = "hidden";
 
         form.innerHTML = `
             <div class="loading-container">
+                <h1>Sending...</h1>
                 <i class="fa fa-spinner"></i>
 
             </div>
                 `;
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
 
         await fetch('https://emailsendeer.herokuapp.com/sendemail', {
             method: 'POST',
@@ -46,20 +44,24 @@ class Contact extends Component {
             })
         }).then(() => {
 
-            greeting.innerHTML = "You've sent successfully your request."
             form.innerHTML = `
-                <i class="fa fa-check-circle"></i>
+            <div class="loading-container">
+            <h1>Your request was succefully sent.</h1>
+            <i class="fa fa-check-circle"></i>
+
+            </div>
+            
        `;
             setTimeout(() => {
                 document.body.innerHTML = "";
                 document.location.replace('/')
                 window.scrollTo(0, 0)
-            }, 3000);
+            }, 4000);
 
-        })
-            .catch(error => {
+        }).catch(error => {
+            
                 // enter your logic for when there is an error (ex. error toast)
-                console.log(error)
+                console.log("error:"+ error.code)
             })
 
 
@@ -69,6 +71,12 @@ class Contact extends Component {
     render() {
         return (
             <div >
+
+                <div id="loading-container">
+                    {/* this is the loading screen */}
+
+                </div>
+
                 <div className="background-form">
                     <Link to="/">
                         <i className="fa fa-arrow-left contact-arrow" />
