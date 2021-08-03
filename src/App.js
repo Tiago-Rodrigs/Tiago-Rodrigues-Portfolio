@@ -11,14 +11,14 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        
+        <HashRouter>
           <Switch>
             <Route exact path="/" component={Portfolio} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
 
           </Switch>
-          
+          </HashRouter>
           <Footer/>
         
       </BrowserRouter>
