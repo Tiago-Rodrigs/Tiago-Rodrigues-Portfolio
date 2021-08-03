@@ -12,17 +12,18 @@ class Contact extends Component {
             greeting: "How can I help you today?"
         }
         window.scrollTo(0, 0)
-        console.log(this.state.msg)
+        this.send = this.send.bind(this)
     }
 
-    send = async () => {
-        let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
-        let msg = document.getElementById('message').value;
-        let form = document.getElementById('loading-container');
+    async send(){
+
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const msg = document.getElementById('message').value;
+        const form = document.getElementById('loading-container');
 
         document.body.style.overflow = "hidden";
-        document.body.style.touchAction = "none";
         
         
 
@@ -45,29 +46,37 @@ class Contact extends Component {
                 message: msg,
                 email: email
             })
-        }).then(() => {
+        }).then(async() => {
 
             form.innerHTML = `
             <div class="loading-container">
             <h1>Your request was succefully sent.</h1>
             <i class="fa fa-check-circle"></i>
+    
+            </div>
+            
+       `    
+
+   
+            
+
+        }).catch((error) => {
+            alert(error)
+            form.innerHTML = `
+            <div class="loading-container">
+            <h1>Sorry try again later.</h1>
+            <i class="fa fa-times"></i>
 
             </div>
             
        `;
-            setTimeout(() => {
-                document.body.innerHTML = "";
-                document.location.replace('/')
-                window.scrollTo(0, 0)
-            }, 4000);
-
-        }).catch(error => {
-            
-                // enter your logic for when there is an error (ex. error toast)
-                console.log("error:"+ error.code)
             })
 
+            setTimeout(function() {
+                window.location.replace('/')
+            }.bind(this), 3000);
 
+            
 
     }
 
@@ -101,7 +110,7 @@ class Contact extends Component {
                 </h1>
 
 
-                <form className="contact-form" id="form">
+                <form className="contact-form" id="form" onSubmit={this.send}>
 
                     <div className="email-name-container">
                         <label className="name">Name</label><input type="name" id="name" required></input>
@@ -110,8 +119,8 @@ class Contact extends Component {
 
                     <div className="message-container">
                         <label>Message</label>
-                        <textarea id="message" >{this.state.msg.length !== 0 ? `Hello, I would like to request a quote for the ${this.state.msg} package/website.` : ""}</textarea>
-                        <button onClick={() => this.send()}>Submit</button>
+                        <textarea id="message" required>{this.state.msg.length !== 0 ? `Hello, I would like to request a quote for the ${this.state.msg} package/website.` : ""}</textarea>
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
 
