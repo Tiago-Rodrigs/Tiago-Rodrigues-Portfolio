@@ -1,5 +1,6 @@
 import { React, Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import avatar from '../../assets/avatar.png';
 import './style.css';
 
@@ -20,10 +21,10 @@ class Contact extends Component {
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const msg = document.getElementById('message').value;
+        const message = document.getElementById('message').value;
         const form = document.getElementById('loading-container');
 
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow ="hidden";
         
         
 
@@ -36,17 +37,15 @@ class Contact extends Component {
                 `;
         window.scrollTo(0, 0);
 
-        await fetch('https://emailsendeer.herokuapp.com/sendemail', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name: name,
-                message: msg,
-                email: email
-            })
-        }).then(async() => {
+        await axios({
+            method: 'post',
+            url:'https://emailsendeer.herokuapp.com/sendemail',
+            data: {
+                name,
+                message,
+                email
+            }
+          }).then(() => {
 
             form.innerHTML = `
             <div class="loading-container">
@@ -55,12 +54,7 @@ class Contact extends Component {
     
             </div>
             
-       `    
-
-   
-            
-
-        }).catch((error) => {
+       `}).catch((error) => {
             alert(error)
             form.innerHTML = `
             <div class="loading-container">
@@ -69,13 +63,12 @@ class Contact extends Component {
 
             </div>
             
-       `;
-            })
+       `})
 
             setTimeout(function() {
-                window.location.replace('/')
+                this.props.history.replace('/')
+                document.body.style.overflow ="scroll";
             }.bind(this), 3000);
-
             
 
     }
