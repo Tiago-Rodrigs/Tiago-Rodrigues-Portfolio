@@ -1,4 +1,4 @@
-.loading-container{
+.loading-container {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -7,32 +7,29 @@
     z-index: 10;
     background: rgba(0, 0, 0, 0.87);
     height: 100vh;
+    touch-action: none;
+    -ms-touch-action: none;
     width: 100%;
 }
 
-.loading-container h1{
+.loading-container h1 {
     font-size: 21pt;
     color: white;
     margin-bottom: 30px;
 }
 
-
-.fa-spinner{
+.fa-spinner {
     z-index: 2;
     color: rgb(255, 255, 255);
     font-size: 60pt;
     animation: spin 2s linear infinite;
 }
 
-
-
-.fa-check-circle{
-
+.fa-check-circle {
     z-index: 2;
     color: green;
     font-size: 60pt;
 }
-
 
 .background-form {
     position: relative;
@@ -154,22 +151,14 @@
     color: white;
 }
 
-
-
-
-
-
-
 @keyframes spin {
     from {
-      transform: rotate(0deg);
-
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
-
+        transform: rotate(360deg);
     }
-  }
+}
 
 @media only screen and (max-width: 600px) {
     .background-form {

@@ -22,6 +22,9 @@ class Contact extends Component {
         let form = document.getElementById('loading-container');
 
         document.body.style.overflow = "hidden";
+        document.body.style.touchAction = "none";
+        
+        
 
         form.innerHTML = `
             <div class="loading-container">
