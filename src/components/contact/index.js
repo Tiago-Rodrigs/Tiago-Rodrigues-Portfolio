@@ -67,7 +67,7 @@ class Contact extends Component {
 
             setTimeout(function() {
                 this.props.history.replace('/')
-                document.body.style.overflow ="scroll";
+                document.body.style.overflowY ="scroll";
             }.bind(this), 3000);
             
 
