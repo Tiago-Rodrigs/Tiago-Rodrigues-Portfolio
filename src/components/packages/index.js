@@ -6,9 +6,9 @@ import './style.css';
 class Packages extends Component {
 
 
-    changeOption = (option) => {
+    changeOption = async(option) => {
         if (option !== null) {
-            document.getElementById(option).scrollIntoView({
+            await document.getElementById(option).scrollIntoView({
                 behavior: "smooth",
                 block: "end", inline: "nearest"
             });
