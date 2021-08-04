@@ -1,7 +1,7 @@
 import { React, Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/header'
-import Packages from '../packages';
+import Packages from '../../components/packages';
 import react_icon from '../../assets/react.png';
 import html_icon from '../../assets/html.png';
 import git_icon from '../../assets/git.png';

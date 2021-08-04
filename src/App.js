@@ -1,10 +1,10 @@
-import { React, Component } from 'react';
-import { BrowserRouter, Switch, Route, HashRouter } from 'react-router-dom';
-import Portfolio from './components/portfolio';
-import About from './components/about';
-import Contact from './components/contact';
-import './App.css';
+import { React } from 'react';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import Portfolio from './pages/portfolio';
+import About from './pages/about';
+import Contact from './pages/contact';
 import Footer from './components/footer';
+import './index.css';
 
 
 function App() {

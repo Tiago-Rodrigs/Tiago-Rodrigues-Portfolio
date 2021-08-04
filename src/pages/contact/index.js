@@ -9,14 +9,16 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            msg: window.location.hash.slice(14),
+            msg: window.location.search.slice(5),
             greeting: "How can I help you today?"
         }
         window.scrollTo(0, 0)
-        this.send = this.send.bind(this)
+        this.send = this.send.bind(this);
     }
 
-    async send(){
+    async send(e){
+
+        e.preventDefault();
 
         
         const name = document.getElementById('name').value;
