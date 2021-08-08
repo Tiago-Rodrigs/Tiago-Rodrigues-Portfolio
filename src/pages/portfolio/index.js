@@ -5,6 +5,7 @@ import loja from '../../assets/online-store.jpg';
 import dog from '../../assets/dog-search.jpg';
 import startup from '../../assets/startup.jpg';
 import wedding from '../../assets/wedding.JPG';
+import emailTemplate from '../../assets/email template.jpg';
 import './portfolio.css';
 
 class Portfolio extends Component {
@@ -65,6 +66,16 @@ class Portfolio extends Component {
                                 
                             </div>
                             <img src={dog} />
+                        </div>
+
+
+                        <div className="image-portfolio">
+                            <div className="link-website">
+                                <a href="https://www.figma.com/file/HGiDPPPFA7ikn7OTNbVzd4/email-template?node-id=0%3A1" target="_blank" >SEE DESIGN</a>
+                                <Link to="/contact?msg=Dog">REQUEST QUOTE</Link>
+                                
+                            </div>
+                            <img src={emailTemplate} />
                         </div>
 
 

@@ -1,145 +1,129 @@
-.about-container{
-    position: relative;
-    width: 90%;
-    margin: 250px auto 50px auto;
-    z-index: 1;
-
+.about-container {
+  position: relative;
+  width: 90%;
+  margin: 250px auto 50px auto;
+  z-index: 1;
 }
 
-.about-container .portfolio-title{
-    background: rgba(0, 0, 0, 0.534);
-    width: 200px;
-    color: white;
+.about-container .portfolio-title {
+  color: black;
+  background: white;
+  top: -5px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
 }
 
-.about-container .about-title{
-
-    position: absolute;
-    top: -21px;
-    right: 0px;
-    background: black;
-    width: 200px;
-    color: white;
+.about-container .about-title {
+  right: 0px;
+  position: absolute;
+  top: -15px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
+  z-index: 2;
+  color: white;
+  background: black;
 }
 
-.ball2{
-    position: absolute;
-    animation: 0.4s linear slide2;
-    left: 92%;
-    background: black;
-    width: 25px;
-    height: 25px;
-    border-radius:50% ;
+.ball2 {
+  position: absolute;
+  animation: 0.4s linear slide2;
+  left: 92%;
+  background: black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 
-.introduction{
+.introduction {
   border: 1px solid yellow;
   border-radius: 10px;
   padding: 50px;
   margin-bottom: 100px;
 }
 
-.skills-container{
+.skills-container {
   width: auto;
   display: flex;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.skills-container img{
+.skills-container img {
   width: 55px;
   height: 55px;
   margin: 10px;
 }
 
-
-
-
-
-
-
-
-
 @keyframes slide2 {
-    from {
-      left: 80px;
-      transform: translateX(80px);
-      
-      
-    }
-    to{
-      left: 92%;
-      transform: translateX(92%);
-      
-      
-    }
+  from {
+    left: 80px;
+    transform: translateX(80px);
   }
+  to {
+    left: 92%;
+    transform: translateX(92%);
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .about-container {
+    position: relative;
+    width: 90%;
+    margin: 310px auto -150px auto;
+  }
+  .about-container .portfolio-title {
 
-  @media only screen and (max-width: 600px){
-
-    .about-container{
-      position: relative;
-      width: 90%;
-      margin: 310px auto -150px auto;
-  
+    width: 150px;
+    color: black;
+    position: relative;
   }
-  
-  .about-container .portfolio-title{
-      background: rgba(0, 0, 0, 0.534);
-      width: 150px;
-      color: white;
+  .about-container .about-title {
+    position: absolute;
+    top: -21px;
+    right: 0px;
+    background: black;
+    width: 150px;
+    color: white;
   }
-  
-  .about-container .about-title{
-  
-      position: absolute;
-      top: -21px;
-      right: 0px;
-      background: black;
-      width: 150px;
-      color: white;
+  .ball2 {
+    left: 75%;
+    background: black;
   }
-  
-  .ball2{
-      left: 75%;
-      background: black;
-  }
-  
-  .introduction{
+  .introduction {
     border: 1px solid yellow;
     border-radius: 10px;
     padding: 50px;
     margin-bottom: 100px;
   }
-
-
-
-  .skills-container img{
+  .skills-container img {
     width: 40px;
     height: 40px;
   }
-  
-  
-  
-  
-
-@keyframes slide2 {
-  from {
-    left: 50px;
-    transform: translateX(50px);
-    
-    
-  }
-  to{
-    left: 75%;
-    transform: translateX(75%);
-    
-    
+  @keyframes slide2 {
+    from {
+      left: 50px;
+      transform: translateX(50px);
+    }
+    to {
+      left: 75%;
+      transform: translateX(75%);
+    }
   }
 }
-  
-  
-  
-  }
