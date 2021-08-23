@@ -72,7 +72,7 @@ class Portfolio extends Component {
                         <div className="image-portfolio">
                             <div className="link-website">
                                 <a href="https://www.figma.com/file/HGiDPPPFA7ikn7OTNbVzd4/email-template?node-id=0%3A1" target="_blank" >SEE DESIGN</a>
-                                <Link to="/contact?msg=Dog">REQUEST QUOTE</Link>
+                                <Link to="/contact?msg=Email">REQUEST QUOTE</Link>
                                 
                             </div>
                             <img src={emailTemplate} />
