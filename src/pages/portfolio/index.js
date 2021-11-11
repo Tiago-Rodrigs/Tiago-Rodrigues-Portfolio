@@ -5,6 +5,7 @@ import loja from '../../assets/online-store.jpg';
 import dog from '../../assets/dog-search.jpg';
 import startup from '../../assets/startup.jpg';
 import wedding from '../../assets/wedding.JPG';
+import dkorr from '../../assets/dkorr.png';
 import emailTemplate from '../../assets/email template.jpg';
 import './portfolio.css';
 
@@ -41,6 +42,14 @@ class Portfolio extends Component {
                                 <Link to="/contact?msg=Wedding">REQUEST QUOTE</Link>
                             </div>
                             <img src={wedding} />
+                        </div>
+
+                        <div className="image-portfolio">
+                            <div className="link-website">
+                                <a href="https://dkorr.fr" target="_blank" >SEE WEBSITE</a>
+                                <Link to="/contact?msg=Startup">REQUEST QUOTE</Link>
+                            </div>
+                            <img src={dkorr} />
                         </div>
 
                         <div className="image-portfolio">
