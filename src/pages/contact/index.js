@@ -90,7 +90,8 @@ class Contact extends Component {
                     </Link>
 
                     <img src={avatar} className="contact-avatar" />
-                    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=00351937397475" >
+                         <a href="https://wa.me/351937397475">
+                    
                         <i className="fa fa-phone contact-phone" />
                     </a>
 
