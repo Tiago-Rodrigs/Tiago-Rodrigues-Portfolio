@@ -6,6 +6,7 @@ import dog from '../../assets/dog-search.jpg';
 import startup from '../../assets/startup.jpg';
 import wedding from '../../assets/wedding.JPG';
 import dkorr from '../../assets/dkorr.png';
+import beezy from '../../assets/beezy.png';
 import emailTemplate from '../../assets/email template.jpg';
 import './portfolio.css';
 
@@ -35,6 +36,15 @@ class Portfolio extends Component {
                     <br />
                     <div className="image-container">
 
+
+            
+                       <div className="image-portfolio">
+                            <div className="link-website">
+                                <a href="https://beezy-challenge.netlify.app" target="_blank" >SEE WEBSITE</a>
+                                <Link to="/contact?msg=startup">REQUEST QUOTE</Link>
+                            </div>
+                            <img src={beezy} />
+                        </div>
 
                         <div className="image-portfolio">
                             <div className="link-website">
