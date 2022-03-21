@@ -27,9 +27,9 @@
 
 .btn-background {
   position: absolute;
-  right: 5%;
+  right: 10.3%;
   top: 30px;
-  background: rgba(117, 16, 247, 1);
+  background: var(--main-color);
   color: white;
   font-weight: 800;
   padding: 15px 25px;
@@ -40,7 +40,7 @@
 
 .avatar {
   position: absolute;
-  left: 5%;
+  left: 6.5%;
   top: 70px;
   width: 350px;
   height: 350px;
@@ -49,6 +49,7 @@
 .header-title {
   position: absolute;
   left: 30%;
+  
 }
 
 .header-title h1 {
@@ -66,7 +67,7 @@
 .header-share {
   position: absolute;
   margin-top: 55px;
-  right: 10%;
+  right: 15%;
   font-size: 35pt;
   cursor: pointer;
 }
@@ -114,7 +115,7 @@
     position: absolute;
     right: 5%;
     top: 30px;
-    background: rgba(117, 16, 247, 1);
+    background: var(--main-color);
     color: white;
     font-weight: 800;
     padding: 15px 25px;

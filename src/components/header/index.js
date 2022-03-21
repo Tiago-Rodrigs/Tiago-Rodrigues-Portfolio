@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../../assets/avatar.png";
 import background from "../../assets/background.mp4";
-import poster_video from "../../assets/background-poster.png"
+import poster_video from "../../assets/background-poster.png";
 import "./style.css";
 
 class Header extends Component {
