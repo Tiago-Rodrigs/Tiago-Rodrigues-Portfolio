@@ -7,12 +7,12 @@ function ImageCard(props) {
   return (
     <div className="image-home">
       <div className="link-website">
-        <a href={props.link} target="_blank">
+        <a href={props.link} target="_blank" rel="noreferrer">
           SEE {props.type}
         </a>
         <Link to={`/contact?msg=${props.message}`}>REQUEST QUOTE</Link>
       </div>
-      <img src={props.thumbnail} />
+      <img src={props.thumbnail} alt={`${props.message} project`} />
     </div>
   );
 }

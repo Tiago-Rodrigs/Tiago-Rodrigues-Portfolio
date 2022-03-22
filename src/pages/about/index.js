@@ -64,7 +64,7 @@ class About extends Component {
 
             <div className="skills-container">
               {images.map((item) => {
-                return <img src={item} />;
+                return <img src={item} alt="technologies" />;
               })}
             </div>
           </div>

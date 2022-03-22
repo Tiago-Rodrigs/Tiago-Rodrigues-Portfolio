@@ -85,7 +85,7 @@ class Contact extends Component {
             <i className="fa fa-arrow-left contact-arrow" />
           </Link>
 
-          <img src={avatar} className="contact-avatar" />
+          <img src={avatar} className="contact-avatar" alt="avatar" />
           <a href="https://wa.me/351937397475">
             <i className="fa fa-phone contact-phone" />
           </a>

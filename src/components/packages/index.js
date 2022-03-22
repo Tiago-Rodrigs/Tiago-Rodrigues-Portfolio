@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 class Packages extends Component {
-  changeOption = async (option) => {
+  changeOption =  (option) => {
     if (option !== null) {
-      await document.getElementById(option).scrollIntoView({
+       document.getElementById(option).scrollIntoView({
         behavior: "smooth",
         block: "end",
         inline: "nearest",
@@ -124,7 +124,6 @@ class Packages extends Component {
             </article>
           </div>
         </div>
-
       </div>
     );
   }

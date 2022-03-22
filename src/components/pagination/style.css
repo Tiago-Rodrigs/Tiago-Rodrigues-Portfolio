@@ -79,6 +79,17 @@
   }
 }
 
+@keyframes slide2 {
+  from {
+    left: 80px;
+    transform: translateX(80px);
+  }
+  to {
+    right: 92%;
+    transform: translateX(92%);
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .container .home-title {
     width: 150px;
@@ -95,6 +106,12 @@
     left: 50px;
   }
 
+  .ball-about {
+    
+    left: 78%;
+    
+  }
+
   @keyframes slide {
     from {
       left: 75%;
@@ -103,6 +120,17 @@
     to {
       left: 50px;
       transform: translateX(50px);
+    }
+  }
+
+  @keyframes slide2 {
+    from {
+      left: 50px;
+      transform: translateX(50px);
+    }
+    to {
+      right: 78%;
+      transform: translateX(78%);
     }
   }
 }
