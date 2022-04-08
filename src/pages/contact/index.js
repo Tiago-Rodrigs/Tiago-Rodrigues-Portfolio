@@ -1,17 +1,12 @@
 import { React, Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import avatar from "../../assets/avatar.png";
+import avatar from "../../assets/avatar-contact.png";
 import "./style.css";
-import "../../global.css";
 
 class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      msg: window.location.search.slice(5),
-      greeting: "How can I help you today?",
-    };
     window.scrollTo(0, 0);
     this.send = this.send.bind(this);
   }
@@ -30,24 +25,24 @@ class Contact extends Component {
             <div class="loading-container">
                 <h1>Sending...</h1>
                 <i class="fa fa-spinner"></i>
-
             </div>
                 `;
     window.scrollTo(0, 0);
 
     await axios({
       method: "post",
-      url: "https://emailsendeer.herokuapp.com/sendemail",
+      url: "",
       data: {
         name,
         message,
         email,
+        terms: true,
       },
     })
       .then(() => {
         form.innerHTML = `
             <div class="loading-container">
-            <h1>Your request was succefully sent.</h1>
+            <h1>Successfully sent.</h1>
             <i class="fa fa-check-circle"></i>
     
             </div>
@@ -55,12 +50,11 @@ class Contact extends Component {
        `;
       })
       .catch((error) => {
-        alert(error);
         form.innerHTML = `
             <div class="loading-container">
-            <h1>Sorry try again later.</h1>
+            <h1>${error.message}.
+            Try it again another time</h1>
             <i class="fa fa-times"></i>
-
             </div>
             
        `;
@@ -77,7 +71,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <div className="contact-container">
         <div id="loading-container">{/* this is the loading screen */}</div>
 
         <div className="background-form">
@@ -85,8 +79,8 @@ class Contact extends Component {
             <i className="fa fa-arrow-left contact-arrow" />
           </Link>
 
-          <img src={avatar} className="contact-avatar" alt="avatar" />
-          <a href="https://wa.me/351937397475">
+          <img src={avatar} className="contact-avatar" />
+          <a href="tel:+4917646796891">
             <i className="fa fa-phone contact-phone" />
           </a>
         </div>
@@ -95,11 +89,7 @@ class Contact extends Component {
         <br />
 
         <h1 className="greeting" id="greeting">
-          Thanks for taking the time to reach out.
-          <br />
-          {this.state.msg.length === 0
-            ? "How can I help you today?"
-            : "Please fill in the form below!"}
+          Thanks for taking the time to reach out 🙂 
         </h1>
 
         <form className="contact-form" id="form" onSubmit={this.send}>
@@ -112,11 +102,8 @@ class Contact extends Component {
 
           <div className="message-container">
             <label>Message</label>
-            <textarea id="message" required>
-              {this.state.msg.length !== 0
-                ? `Hello, I would like to request a quote for the ${this.state.msg} package/website.`
-                : ""}
-            </textarea>
+            <textarea id="message" required></textarea>
+
             <button type="submit">Submit</button>
           </div>
         </form>

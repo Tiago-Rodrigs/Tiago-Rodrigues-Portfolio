@@ -1,5 +1,5 @@
 :root {
-  --main-color: rgba(117, 16, 247, 1);
+  --main-color: #1088f7;
   --black-light: rgba(0, 0, 0, 0.87);
 }
 
@@ -11,11 +11,16 @@ html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+
+p, h2, li, strong{
+  list-style:inside;
+  color: rgba(0, 0, 0, 0.527);
 }
 
 code {
@@ -32,12 +37,15 @@ code {
   position: relative;
   z-index: 10;
   width: 80%;
-  margin: 250px auto 50px auto;
+  height: auto;
+  margin: 0px auto 50px auto;
+  padding-top: 50px;
+  z-index: 10;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 830px) {
   .container {
-    margin: 310px auto -140px auto;
+    
     width: 90%;
   }
 }

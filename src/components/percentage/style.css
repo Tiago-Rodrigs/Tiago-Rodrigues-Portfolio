@@ -1,0 +1,42 @@
+.percentage-container{
+    background: rgba(0, 0, 0, 0.229);
+    width: 90%;
+    height: 40px;
+    margin: 60px auto 60px auto;
+    border-radius: 20px;
+}
+
+.percentage-container .percentage{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 100%;
+    background: var(--main-color);
+    border-radius: 20px;
+}
+
+.percentage-container .percentage p{
+
+    color: white;
+    padding: 30px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .percentage-container{
+        width: 90%;
+
+        
+    }
+    .percentage-container .percentage{
+        
+    }
+    .percentage-container .percentage p{
+
+        color: white;
+        padding: 15px ;
+        font-size: 8pt;
+        font-weight: 200;
+    }
+  }
