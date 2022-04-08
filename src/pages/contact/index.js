@@ -1,27 +1,21 @@
-import { React, Component } from "react";
+import { React, Component, useRef } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import avatar from "../../assets/avatar-contact.png";
 import "./style.css";
 
-class Contact extends Component {
-  constructor(props) {
-    super(props);
-    window.scrollTo(0, 0);
-    this.send = this.send.bind(this);
-  }
+const Contact = (props) => {
+  window.scrollTo(0, 0);
+  const form = useRef();
 
-  async send(e) {
+  const send = async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    const form = document.getElementById("loading-container");
+    const loading = document.getElementById("loading-container");
 
     document.body.style.overflow = "hidden";
 
-    form.innerHTML = `
+    loading.innerHTML = `
             <div class="loading-container">
                 <h1>Sending...</h1>
                 <i class="fa fa-spinner"></i>
@@ -29,87 +23,83 @@ class Contact extends Component {
                 `;
     window.scrollTo(0, 0);
 
-    await axios({
-      method: "post",
-      url: "",
-      data: {
-        name,
-        message,
-        email,
-        terms: true,
-      },
-    })
-      .then(() => {
-        form.innerHTML = `
-            <div class="loading-container">
-            <h1>Successfully sent.</h1>
-            <i class="fa fa-check-circle"></i>
-    
-            </div>
-            
-       `;
-      })
-      .catch((error) => {
-        form.innerHTML = `
-            <div class="loading-container">
-            <h1>${error.message}.
-            Try it again another time</h1>
-            <i class="fa fa-times"></i>
-            </div>
-            
-       `;
-      });
+    await emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        () => {
+          loading.innerHTML = `
+        <div class="loading-container">
+        <h1>Message successfully sent.</h1>
+        <i class="fa fa-check-circle"></i>
 
-    setTimeout(
-      function () {
-        this.props.history.replace("/");
-        document.body.style.overflowY = "scroll";
-      }.bind(this),
-      3000
-    );
-  }
-
-  render() {
-    return (
-      <div className="contact-container">
-        <div id="loading-container">{/* this is the loading screen */}</div>
-
-        <div className="background-form">
-          <Link to="/">
-            <i className="fa fa-arrow-left contact-arrow" />
-          </Link>
-
-          <img src={avatar} className="contact-avatar" />
-          <a href="tel:+4917646796891">
-            <i className="fa fa-phone contact-phone" />
-          </a>
         </div>
-        <br />
-        <br />
-        <br />
+        
+   `;
+        },
+        (error) => {
+          loading.innerHTML = `
+        <div class="loading-container">
+        <h1>${error.text}.
+        Try it again another time</h1>
+        <i class="fa fa-times"></i>
+        </div>
+        
+   `;
+        }
+      );
 
-        <h1 className="greeting" id="greeting">
-          Thanks for taking the time to reach out 🙂 
-        </h1>
+    setTimeout(function () {
+      window.location.replace("/");
+      document.body.style.overflowY = "scroll";
+    }, 3000);
+  };
 
-        <form className="contact-form" id="form" onSubmit={this.send}>
-          <div className="email-name-container">
-            <label className="name">Name</label>
-            <input type="name" id="name" required></input>
-            <label className="email">Email</label>
-            <input type="email" id="email" required></input>
-          </div>
+  return (
+    <div className="contact-container">
+      <div id="loading-container">{/* this is the loading screen */}</div>
 
-          <div className="message-container">
-            <label>Message</label>
-            <textarea id="message" required></textarea>
+      <div className="background-form">
+        <Link to="/">
+          <i className="fa fa-arrow-left contact-arrow" />
+        </Link>
 
-            <button type="submit">Submit</button>
-          </div>
-        </form>
+        <img src={avatar} className="contact-avatar" />
+        <a href="tel:+4917646796891">
+          <i className="fa fa-phone contact-phone" />
+        </a>
       </div>
-    );
-  }
-}
+      <br />
+      <br />
+      <br />
+
+      <h1 className="greeting" id="greeting">
+        Thanks for taking the time to reach out 🙂
+      </h1>
+
+      <form className="contact-form" id="form" onSubmit={send} ref={form}>
+        <div className="email-name-container">
+          <label className="name">Name</label>
+          <input type="name" id="name" name="from_name" required></input>
+          <label className="email">Email</label>
+          <input type="email" id="email" name="from_email" required></input>
+        </div>
+
+        <div className="message-container">
+          <label>Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" value="Send">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default Contact;

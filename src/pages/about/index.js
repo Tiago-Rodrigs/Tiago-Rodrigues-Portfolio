@@ -21,7 +21,7 @@ class About extends Component {
           <h1>Who am I?</h1>
 
           <p>
-            Hello :) My name is Tiago, I'm 24 years old and a technology and
+            Hello 🙂 My name is Tiago, I'm 24 years old and a technology and
             sports enthusiast. In my free time I like to go to nature, read
             books and spend time with my family. I'm a hardworking, organized,
             focused and determined person. I'm self-taught and I enjoy learning
