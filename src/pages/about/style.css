@@ -1,20 +1,22 @@
 .about-container {
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.252);
   background: white;
   width: 80%;
   margin: auto;
   border-bottom-left-radius: 80px;
   border-top-right-radius: 50px;
   margin-bottom: 100px;
+  -webkit-box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.34);
+  box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.34);
 }
 
-.about-container > h1{
+.about-container > h1 {
   padding: 30px;
 }
-.about-container > p{
+.about-container > p {
   padding: 30px;
 }
-
 
 .cv-btn {
   margin: 60px auto 100px auto;
@@ -35,12 +37,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .about-container{
+  .about-container {
     width: 90%;
   }
   .cv-btn {
-  
     width: 90%;
-    
   }
 }
