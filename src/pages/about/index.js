@@ -19,15 +19,14 @@ class About extends Component {
 
         <div className="about-container">
           <h1>Who am I?</h1>
-   
+
           <p>
-            Hello, my name is Tiago, I am 24 years old and I am a technology and
+            Hello :) My name is Tiago, I'm 24 years old and a technology and
             sports enthusiast. In my free time I like to go to nature, read
-            books, and spend some time with my family. I am a hardworking,
-            organized, focused, and determined person. I am self-taught and I
-            enjoy learning new things (especially things that are challenging to
-            learn). My purpose in life is to help people and develop myself.
-        
+            books and spend time with my family. I'm a hardworking, organized,
+            focused and determined person. I'm self-taught and I enjoy learning
+            new things - especially things that are challenging to learn. My
+            purpose in life is to help people and develop myself.
           </p>
 
           <br />
@@ -41,12 +40,13 @@ class About extends Component {
           <Percentage technology="HTML" percentage="95%" />
           <Percentage technology="CSS" percentage="95%" />
           <Percentage technology="JAVASCRIPT" percentage="90%" />
+          <Percentage technology="FIGMA" percentage="90%" />
+
           <Percentage technology="REACT JS" percentage="85%" />
+          <Percentage technology="GIT" percentage="80%" />
           <Percentage technology="NODE JS" percentage="35%" />
           <Percentage technology="FIREBASE" percentage="30%" />
           <Percentage technology="MONGODB" percentage="27%" />
-          <Percentage technology="FIGMA" percentage="90%" />
-          <Percentage technology="GIT" percentage="80%" />
         </div>
 
         <button

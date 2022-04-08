@@ -20,6 +20,8 @@ a {
 
 p, h2, li, strong{
   list-style:inside;
+  text-align: justify;
+  hyphens: auto;
   color: rgba(0, 0, 0, 0.527);
 }
 

@@ -21,10 +21,7 @@
   border-bottom: 5px solid var(--main-color);
 }
 
-.card-container .info-container p {
-  text-align: justify;
-  hyphens: auto;
-}
+
 .card-container .black-border h1 {
   padding: 0px;
   margin: 0px;
