@@ -1,7 +1,7 @@
 import { React, Component, useRef } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-import avatar from "../../assets/avatar-contact.png";
+import avatar from "../../assets/avatar-support.png";
 import "./style.css";
 
 const Contact = (props) => {
