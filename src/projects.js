@@ -63,7 +63,7 @@ let projects = [
     functionalities: ["See details", "See address", "Confirm attendance"],
     img: wedding,
     technologies: ["fa-html5", "fa-css3-alt"],
-    codeLink: "",
+    codeLink: "https://github.com/Tiago-Rodrigs/Webiste-Wedding",
     demoLink: "https://this-is-a-wedding-demo.netlify.app/index.html",
     display: "right",
   },
