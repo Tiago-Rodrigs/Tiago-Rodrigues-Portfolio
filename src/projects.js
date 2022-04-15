@@ -5,6 +5,7 @@ import wedding from "../src/assets/wedding.png";
 import dkorr from "../src/assets/dkorr.png";
 import weather from "../src/assets/website-weather.png";
 import beezy from "../src/assets/beezy.png";
+import clock from "../src/assets/clock.png";
 
 // Array of images and information about projects
 let projects = [
@@ -69,6 +70,18 @@ let projects = [
   },
 
   {
+    type: "website",
+    title: "Dark clock",
+    description: "This is a Javascript clock that displays current time.",
+    functionalities: ["See time"],
+    img: clock,
+    technologies: ["fa-html5", "fa-css3-alt", "fa-js-square"],
+    codeLink: "https://github.com/Tiago-Rodrigs/Javascript-Clock",
+    demoLink: "https://clockjss.netlify.app/",
+    display: "left",
+  },
+
+  {
     type: "design",
     title: "Startup Design",
     description:
@@ -81,7 +94,7 @@ let projects = [
     img: startup,
     technologies: ["fa-figma"],
     designLink: "https://www.figma.com/file/n71kIcyf0Axl8tILcXM07R/Softunit",
-    display: "left",
+    display: "right",
   },
 
   {
@@ -98,7 +111,7 @@ let projects = [
     technologies: ["fa-figma"],
     designLink:
       "https://www.figma.com/file/VljQOUwgcAdO4xMw4SqyoP/Sua-promocao-clt-Manuel?node-id=0%3A1",
-    display: "right",
+    display: "left",
   },
 
   {
@@ -116,7 +129,7 @@ let projects = [
     technologies: ["fa-figma"],
     designLink:
       "https://www.figma.com/file/Wb3Xt8bofbgdgG3RMQvMO0/Untitled?node-id=5%3A7",
-    display: "left",
+    display: "right",
   },
 ];
 
