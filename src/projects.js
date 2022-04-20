@@ -1,8 +1,8 @@
-import loja from "../src/assets/online-store.jpg";
-import dog from "../src/assets/dog-search.jpg";
-import startup from "../src/assets/startup.jpg";
+import loja from "../src/assets/online-store.png";
+import dog from "../src/assets/dog-search.png";
+import startup from "../src/assets/startup.png";
 import wedding from "../src/assets/wedding.png";
-import dkorr from "../src/assets/dkorr.png";
+import dkorr from "../src/assets/dkorrDesign.png";
 import weather from "../src/assets/website-weather.png";
 import beezy from "../src/assets/beezy.png";
 import clock from "../src/assets/clock.png";
@@ -130,6 +130,25 @@ let projects = [
     designLink:
       "https://www.figma.com/file/Wb3Xt8bofbgdgG3RMQvMO0/Untitled?node-id=5%3A7",
     display: "right",
+  },
+
+  {
+    type: "design",
+    title: "Dkorr Design",
+    description:
+      " A portfolio with pictures of products produced by the company and also provides a way to order customized products.",
+    functionalities: [
+      "See product images",
+      "See details about the company",
+      "Send a quote request",
+      "Get links to social media",
+    ],
+    img: dkorr,
+    technologies: ["fa-figma"],
+
+    designLink:
+      "https://www.figma.com/proto/4uDOPiSEqXv1cyWimXkKk9/Rodrigo-decora%C3%A7%C3%B5es?node-id=37%3A12&scaling=scale-down-width&page-id=0%3A1",
+    display: "left",
   },
 ];
 
