@@ -4,7 +4,6 @@ import emailjs from "@emailjs/browser";
 import avatar from "../../assets/avatar-support.png";
 import "./style.css";
 
-
 const Contact = (props) => {
   window.scrollTo(0, 0);
   const form = useRef();
@@ -26,10 +25,10 @@ const Contact = (props) => {
 
     await emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        "service_wzpk409",
+        "template_3q57pte",
         form.current,
-        process.env.REACT_APP_USER_ID
+        "3p09YdxStxEqmlWdX"
       )
       .then(
         () => {
