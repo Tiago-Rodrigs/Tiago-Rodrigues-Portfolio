@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import avatar from "../../assets/avatar-support.png";
 import "./style.css";
 
+
 const Contact = (props) => {
   window.scrollTo(0, 0);
   const form = useRef();
