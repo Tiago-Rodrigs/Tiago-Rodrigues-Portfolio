@@ -3,12 +3,34 @@ import dog from "../src/assets/dog-search.png";
 import startup from "../src/assets/startup.png";
 import wedding from "../src/assets/wedding.png";
 import dkorr from "../src/assets/dkorrDesign.png";
+import tweeter from "../src/assets/tweeter.png";
 import weather from "../src/assets/website-weather.png";
 import beezy from "../src/assets/beezy.png";
 import clock from "../src/assets/clock.png";
 
 // Array of images and information about projects
 let projects = [
+  {
+    type: "website",
+    title: "Tweeter social media",
+    description: "This is a social media with the same functionalities as the tweet.",
+    functionalities: [
+      "Login & Register",
+      "Create & Save",
+      "Comment & Like & Share",
+    ],
+    img: tweeter,
+    technologies: [
+      "fa-html5",
+      "fa-css3-alt",
+      "fa-js-square",
+      "fa-react",
+      "fa-sass",
+    ],
+    codeLink: "",
+    demoLink: "https://social-media-twet.netlify.app",
+    display: "left",
+  },
   {
     type: "website",
     title: "Weather website",
@@ -23,7 +45,7 @@ let projects = [
     technologies: ["fa-html5", "fa-css3-alt", "fa-js-square", "fa-react"],
     codeLink: "https://github.com/Tiago-Rodrigs/Website-Weather",
     demoLink: "https://theweatherappp.netlify.app/",
-    display: "left",
+    display: "right",
   },
 
   {
@@ -41,7 +63,7 @@ let projects = [
     technologies: ["fa-html5", "fa-css3-alt", "fa-js-square", "fa-react"],
     codeLink: "https://github.com/Tiago-Rodrigs/Website-Dkorr-Decorations",
     demoLink: "https://dkorr.fr/",
-    display: "right",
+    display: "left",
   },
   {
     type: "website",
@@ -53,7 +75,7 @@ let projects = [
     technologies: ["fa-html5", "fa-css3-alt"],
     codeLink: "https://github.com/Tiago-Rodrigs/Landing-Page-Beezy",
     demoLink: "https://beezy-challenge.netlify.app/",
-    display: "left",
+    display: "right",
   },
 
   {
@@ -66,7 +88,7 @@ let projects = [
     technologies: ["fa-html5", "fa-css3-alt"],
     codeLink: "https://github.com/Tiago-Rodrigs/Webiste-Wedding",
     demoLink: "https://this-is-a-wedding-demo.netlify.app/index.html",
-    display: "right",
+    display: "left",
   },
 
   {
@@ -78,7 +100,7 @@ let projects = [
     technologies: ["fa-html5", "fa-css3-alt", "fa-js-square"],
     codeLink: "https://github.com/Tiago-Rodrigs/Javascript-Clock",
     demoLink: "https://clockjss.netlify.app/",
-    display: "left",
+    display: "right",
   },
 
   {
@@ -94,7 +116,7 @@ let projects = [
     img: startup,
     technologies: ["fa-figma"],
     designLink: "https://www.figma.com/file/n71kIcyf0Axl8tILcXM07R/Softunit",
-    display: "right",
+    display: "left",
   },
 
   {
@@ -111,7 +133,7 @@ let projects = [
     technologies: ["fa-figma"],
     designLink:
       "https://www.figma.com/file/VljQOUwgcAdO4xMw4SqyoP/Sua-promocao-clt-Manuel?node-id=0%3A1",
-    display: "left",
+    display: "right",
   },
 
   {
@@ -129,7 +151,7 @@ let projects = [
     technologies: ["fa-figma"],
     designLink:
       "https://www.figma.com/file/Wb3Xt8bofbgdgG3RMQvMO0/Untitled?node-id=5%3A7",
-    display: "right",
+    display: "left",
   },
 
   {
@@ -148,7 +170,7 @@ let projects = [
 
     designLink:
       "https://www.figma.com/proto/4uDOPiSEqXv1cyWimXkKk9/Rodrigo-decora%C3%A7%C3%B5es?node-id=37%3A12&scaling=scale-down-width&page-id=0%3A1",
-    display: "left",
+    display: "right",
   },
 ];
 
