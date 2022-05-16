@@ -54,7 +54,7 @@ class About extends Component {
           type="submit"
           onClick={() =>
             window.open(
-              "https://firebasestorage.googleapis.com/v0/b/react-app-acd6d.appspot.com/o/CV_Tiago%20Rodrigues%20Pereira.pdf?alt=media&token=1444a673-76a8-4fb5-8b68-e337c6ea1668"
+              "https://firebasestorage.googleapis.com/v0/b/react-app-acd6d.appspot.com/o/CV_Tiago%20Rodrigues%20Pereira.pdf?alt=media&token=7b7b22df-0e7b-44c3-bfa8-adb2769b5863"
             )
           }
         >
