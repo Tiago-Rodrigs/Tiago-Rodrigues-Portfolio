@@ -1,12 +1,12 @@
-import loja from "../src/assets/online-store.png";
-import dog from "../src/assets/dog-search.png";
-import startup from "../src/assets/startup.png";
-import wedding from "../src/assets/wedding.png";
-import dkorr from "../src/assets/dkorrDesign.png";
-import tweeter from "../src/assets/tweeter.png";
-import weather from "../src/assets/website-weather.png";
-import beezy from "../src/assets/beezy.png";
-import clock from "../src/assets/clock.png";
+import loja from "../src/assets/online-store.webp";
+import dog from "../src/assets/dog-search.webp";
+import startup from "../src/assets/startup.webp";
+import wedding from "../src/assets/wedding.webp";
+import dkorr from "../src/assets/dkorrDesign.webp";
+import tweeter from "../src/assets/tweeter.webp";
+import weather from "../src/assets/website-weather.webp";
+import beezy from "../src/assets/beezy.webp";
+import clock from "../src/assets/clock.webp";
 
 // Array of images and information about projects
 let projects = [
