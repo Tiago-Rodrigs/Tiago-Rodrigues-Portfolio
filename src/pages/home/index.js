@@ -1,6 +1,6 @@
 import { React, Component } from "react";
 import Header from "../../components/header";
-import projects from "../../projects";
+import Projects from "../../projects";
 import Pagination from "../../components/pagination";
 import Card from "../../components/card";
 import "../../global.css";
